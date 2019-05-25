@@ -64,8 +64,8 @@ console.log(fullName);
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = [];
-allCaps = runners.map(toCaps => {
-    return toCaps.first_name.toUpperCase();
+allCaps = runners.map(runners => {
+    return runners.first_name.toUpperCase();
 });
 console.log(allCaps); 
 
@@ -79,8 +79,8 @@ console.log(largeShirts);
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
 
-ticketPriceTotal = runners.map(donations => {
-    return donations.donation;
+ticketPriceTotal = runners.map(runners => {
+    return runners.donation;
 });
 
 ticketPriceTotal = ticketPriceTotal.reduce((current, next) => current + next)
@@ -91,7 +91,33 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//get email of all the patrons to thanks them for there donations and stuff
+let emailsOfRunners = [];
+
+emailsOfRunners = runners.map(runners => {
+    return runners.email;
+});
+
+console.log(emailsOfRunners);
+
 
 // Problem 2
+//Create custom emails for each of the patrons
+let emailsToBeSent = [];
+
+runners.forEach(runner => {
+    emailsToBeSent.push(`Dear ${runner.firstname} ${runner.last_name}, Thank you so much for participating in our 5k run and for your donation of ${runner.donation}`);
+})
+
+console.log(emailsToBeSent);
+
 
 // Problem 3
+//get companies that each person works for
+let companies = [];
+
+companies = runners.map(runners => {
+    return runners.company_name;
+});
+
+console.log(companies);
