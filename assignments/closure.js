@@ -1,6 +1,13 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function add(a,b) {
+  function inner() {
+      console.log(a+b);
+   }
+  return inner();
+}
 
+add(4,6);
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
