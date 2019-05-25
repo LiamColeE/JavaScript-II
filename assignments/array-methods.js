@@ -106,7 +106,7 @@ console.log(emailsOfRunners);
 let emailsToBeSent = [];
 
 runners.forEach(runner => {
-    emailsToBeSent.push(`Dear ${runner.firstname} ${runner.last_name}, Thank you so much for participating in our 5k run and for your donation of ${runner.donation}`);
+    emailsToBeSent.push(`Dear ${runner.first_name} ${runner.last_name}, Thank you so much for participating in our 5k run and for your donation of $${runner.donation}.`);
 })
 
 console.log(emailsToBeSent);
